@@ -1,9 +1,9 @@
-from calendar import c
-from datetime import datetime
-from turtle import filling
+#from calendar import c
+#from datetime import datetime
+#from turtle import filling
 import streamlit as st
 import pandas as pd
-import yfinance as yf
+#import yfinance as yf
 import numpy as np
 
 import seaborn as sb
