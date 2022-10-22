@@ -136,12 +136,26 @@ st.write("Significant historical emission has been released to our atmosphere to
 url2 = "https://github.com/tb1015/Capstone/blob/main/co2-emissions-and-gdp-long-term.csv?raw=true"
 df_gdp_co2 = pd.read_csv(url2)
 #df_gdp_co2 = pd.read_csv("Data/co2-emissions-and-gdp-long-term.csv")
-
 #year_range = st.slider("Year range of emission & GDP data", value=[1900,2020])
 
-y0b = st.select_slider("Select Initial Year",(np.linspace(1900,1960,7)).astype(int))
-y1b = st.select_slider("Select End Year",np.linspace(1970,2020,6).astype(int))
-country = st.text_input("Enter Country/Region")
+st.write("**Please select the time range and the region for the following chart.**")
+col1, col2 = st.columns(2)
+
+with col1:
+    y0b = st.selectbox("Initial year",(np.linspace(1900,1960,7)).astype(int))
+    st.write('You selected:', y0b)
+    
+with col2:
+    y1b = st.selectbox("Final year",np.linspace(1970,2020,6).astype(int))
+    st.write('You selected:', y1b)
+
+#y0b = st.select_slider("Select Initial Year",(np.linspace(1900,1960,7)).astype(int))
+#y1b = st.select_slider("Select End Year",np.linspace(1970,2020,6).astype(int))
+
+#country = st.text_input("Enter Country/Region")
+country = st.selectbox("Enter Country/Region",df_gdp_co2["Entity"].unique(),index=103)
+#st.write('You selected:', country)
+
 df_Ggdp_co2 = df_gdp_co2[df_gdp_co2["Entity"]==country].reset_index(drop=True)
 
 data = df_Ggdp_co2[df_Ggdp_co2["Year"].between(y0b,y1b, inclusive=True)]
