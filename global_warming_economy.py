@@ -14,11 +14,6 @@ import matplotlib.pyplot as plt
 #Plotly untuk tampilan data yang interaktif
 #Gunakan juga space disamping
 
-#today = datetime.today
-
-#st.title("STOCK PRICE")
-#with st.sidebar:
-#    st.title("Mitigating Climate Change")
 
 ##==================================================================================================================================
 #st.set_page_config(layout="wide")
@@ -32,16 +27,8 @@ st.write("Economic development fueled by fossil energy increases Greenhouse Gass
 # Land-Ocean Temperature Index (C)
 
 # read text file into pandas DataFrame
-#url1='https://drive.google.com/file/d/1GKoklFzLZ5Na3DLO7dkwaDwgM3beI61O/view?usp=sharing'
-#url1='https://drive.google.com/uc?id=' + url1.split('/')[-2]
-#df_gtemp = pd.read_csv(url1, sep="\t")
-#df_gtemp = pd.read_csv("Data/global-temp.txt", sep="\t")
-#df_gtemp = pd.read_csv("https://github.com/tb1015/Capstone/blob/main/global-temp.txt?raw=true")
 df_gtemp = pd.read_csv("https://github.com/tb1015/Capstone/blob/main/global-temp.txt?raw=true", sep="\t")
-
-#df_emission = pd.read_csv("Data/annual-co2-emissions-per-country.csv")
 df_emission = pd.read_csv("https://github.com/tb1015/Capstone/blob/main/annual-co2-emissions-per-country.csv?raw=true")
-
 
 Fig = plt.figure(figsize=(6,5))
 df_emission_global = df_emission[df_emission["Entity"]=="World"]
@@ -218,7 +205,7 @@ plt.grid()  #just add this
 st.pyplot(plt.gcf())
 
 
-#st.header("Historical CO2 emissions")
+st.header("Carbon Pricing and Energy Transition")
 
 st.write("Developed countries have realized this condition and initiate to reduce their emissions through carbon pricing schemes driving the energy transition")
 st.write("Carbon pricing without energy transition will only slow or retard the economy development. Such solution is hardly realized in the developing country.")
