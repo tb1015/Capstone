@@ -17,6 +17,8 @@ import matplotlib.pyplot as plt
 ##==================================================================================================================================
 st.set_page_config(layout="wide")
 st.title("Global Warming in Economic Perspective")
+st.write("*Author: Thomas Budiarto*")
+
 st.header("Introduction")
 
 col1, col2 = st.columns(2)
@@ -71,7 +73,7 @@ plt.text(1950, 4.5, 'Data sources: climate.nasa.gov, Global Carbon Project (2021
 
 with col2:
     #st.pyplot(plt.gcf())
-    st.write("**Annual CO2 Emissions (in billion tCO2) and Annomaly Temperature (in °C)**")
+    st.write("**Figure 1: Annual CO2 Emissions (in billion tCO2) and Annomaly Temperature (in °C)**")
     st.write("Data sources: climate.nasa.gov, Global Carbon Project (2021)")
     fig = px.scatter(data, x=x_axis, y=y_axis, color=c_axis, trendline="ols",
                      labels=dict(Temperature="Annomaly in °C"))
@@ -135,6 +137,7 @@ plt.grid()  #just add this
 #plt.show()
 
 with col2:
+    st.write("**Figure 2: Annual CO2 emissions and GDP per capita**")
     st.pyplot(plt.gcf())
 
 
@@ -179,6 +182,7 @@ ax2.set(ylabel=c_axis+" in billion tCO2")
 plt.grid()  #just add this
 
 with col2:
+    st.write("**Figure 3: CO2 Emissions from Energy Use and Land Use**")
     st.pyplot(plt.gcf())
 
 st.header("Carbon Pricing and Energy Transition")
