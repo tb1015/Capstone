@@ -74,7 +74,7 @@ plt.text(1950, 4.5, 'Data sources: climate.nasa.gov, Global Carbon Project (2021
 with col2:
     #st.pyplot(plt.gcf())
     st.write("**Figure 1: Annual CO2 Emissions (in billion tCO2) and Annomaly Temperature (in °C)**")
-    st.write("Data sources: climate.nasa.gov, Global Carbon Project (2021)")
+    st.write("*Data sources: climate.nasa.gov, Global Carbon Project (2021)*")
     fig = px.scatter(data, x=x_axis, y=y_axis, color=c_axis, trendline="ols",
                      labels=dict(Temperature="Annomaly in °C"))
    
@@ -138,7 +138,7 @@ plt.grid()  #just add this
 
 with col2:
     st.write("**Figure 2: Annual CO2 emissions and GDP per capita**")
-    st.write("Data sources: Global Carbon Project (2021)")
+    st.write("*Data sources: Global Carbon Project (2021)*")
     st.pyplot(plt.gcf())
 
 
@@ -184,7 +184,7 @@ plt.grid()  #just add this
 
 with col2:
     st.write("**Figure 3: CO2 Emissions from Energy Use and Land Use**")
-    st.write("Data sources: Global Carbon Project (2021)")
+    st.write("*Data sources: Global Carbon Project (2021)*")
     st.pyplot(plt.gcf())
 
 st.header("Carbon Pricing and Energy Transition")
@@ -194,8 +194,8 @@ st.write("Carbon pricing without energy transition will only slow or retard the 
 
 st.write("Energy transition needs research and new industrial development, which require huge investment. Such investment is too expensive or often un-affordable for most of developing countries, even with help of good carbon pricing scheme.")
 st.write("Clean tech R&D and industrialization are beyond developing countries economical capability.\
-        Utilization of fossil/dirty fuel by developing countries is not only the best practice but also often the only available economical solution.\
-        (Lack of economical capability and technical solution). This condition will lead to much more emission produced by the developing countries (GHG emission potential) during their way to the developed economy.")
+        Utilization of fossil fuel by developing countries is not only the best practice but also often the only available economical solution.\
+        This condition will lead to more emission that will be produced by the developing countries (future GHG emission potential) during their way to the developed economy.")
 
 st.write("Access to affordable clean technologies and resources required to manufacture the technology is necessary to mitigate the GHG emission potential while also allowing developing countries to grow their economy cleanly.")
 st.write("How to obtain the affordable clean technology and manufacture? Sharing resources to grow businesses producing the technology and infrastructure as close as possible to the implementation site.")
