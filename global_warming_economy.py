@@ -138,6 +138,7 @@ plt.grid()  #just add this
 
 with col2:
     st.write("**Figure 2: Annual CO2 emissions and GDP per capita**")
+    st.write("Data sources: Global Carbon Project (2021)")
     st.pyplot(plt.gcf())
 
 
@@ -183,6 +184,7 @@ plt.grid()  #just add this
 
 with col2:
     st.write("**Figure 3: CO2 Emissions from Energy Use and Land Use**")
+    st.write("Data sources: Global Carbon Project (2021)")
     st.pyplot(plt.gcf())
 
 st.header("Carbon Pricing and Energy Transition")
@@ -190,7 +192,7 @@ st.header("Carbon Pricing and Energy Transition")
 st.write("Developed countries have realized this condition and initiate to reduce their emissions through carbon pricing schemes driving the energy transition")
 st.write("Carbon pricing without energy transition will only slow or retard the economy development. Such solution is hardly realized in the developing country.")
 
-st.write("Energy transition needs research and new industrial development, which require huge investment. Such investment is too expensive or often un-affordable for most of the developing countries, even with help of good carbon pricing scheme.")
+st.write("Energy transition needs research and new industrial development, which require huge investment. Such investment is too expensive or often un-affordable for most of developing countries, even with help of good carbon pricing scheme.")
 st.write("Clean tech R&D and industrialization are beyond developing countries economical capability.\
         Utilization of fossil/dirty fuel by developing countries is not only the best practice but also often the only available economical solution.\
         (Lack of economical capability and technical solution). This condition will lead to much more emission produced by the developing countries (GHG emission potential) during their way to the developed economy.")
@@ -198,43 +200,3 @@ st.write("Clean tech R&D and industrialization are beyond developing countries e
 st.write("Access to affordable clean technologies and resources required to manufacture the technology is necessary to mitigate the GHG emission potential while also allowing developing countries to grow their economy cleanly.")
 st.write("How to obtain the affordable clean technology and manufacture? Sharing resources to grow businesses producing the technology and infrastructure as close as possible to the implementation site.")
 
-
-
-#st.subheader("Ini subheader")
-#st.metric("Sales", 100, "-4%")
-#st.dataframe(df_store.head())
-#st.bar_chart(df_store['Quantity'].head(10))
-#st.line_chart(df_store['Sales'].head(10))
-
-#tickerSym = "GOOG"
-#tickerSym = st.radio("Pick Stock", ['GOOGL', "AAPL", "TSLA"])
-#tickerSym = st.selectbox("Pick Stock", ['GOOGL', "AAPL", "TSLA","BSSR.JK","BOSS.JK"])
-
-
-#c1, c2 = st.columns(2)
-    
-#st.header(tickerSym)
-#st.line_chart(tickerDf["Close"])
-#st.dataframe(tickerDf)
-
-#with c1:
-#    tickerSym = st.text_input("Enter Ticker")
-#    periodDat = st.select_slider("Select Period",["1d", "5d", "1mo", "3mo", "ytd"])
-#    tickerDat = yf.Ticker(tickerSym)
-#    tickerDf = tickerDat.history(period=periodDat, interval="1d")# start="2022-08-01", end="2022-10-03") # interval="1d"
-
-#    st.header(tickerSym)
-#    st.line_chart(tickerDf[["Open","Close"]])
-#    st.dataframe(tickerDf)
-
-#with c2:
-#    tickerSym1 = st.text_input("Enter Ticker 2")
-#    periodDat1 = st.select_slider("Select Period 2",["1d", "5d", "1mo", "3mo", "ytd"])
-#    tickerDat1 = yf.Ticker(tickerSym1)
-#    tickerDf1 = tickerDat1.history(period=periodDat1, interval="1d")# start="2022-08-01", end="2022-10-03") # interval="1d"
-
-#    st.header(tickerSym1)
-#    st.line_chart(tickerDf1["Close"])
-    #st.dataframe(tickerDf1)s
-    
-#Scrapping dengan Beautiful Soup
